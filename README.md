@@ -8,7 +8,7 @@ and
 that are universally useful across languages and Bazel projects.
 
 For questions or concerns please email
-[bazel-discuss@googlegroups.com](mailto://bazel-discuss@googlegroups.com)
+[bazel-discuss@googlegroups.com](mailto://bazel-discuss@googlegroups.com).
 
 # Motivation
 
