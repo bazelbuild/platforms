@@ -41,3 +41,8 @@ constraint_value(
     name = "windows",
     constraint_setting = ":os",
 )
+
+constraint_value(
+    name = "none",
+    constraint_setting = ":os",
+)
