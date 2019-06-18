@@ -10,7 +10,7 @@ filegroup(
     srcs = glob(["**"]),
 )
 
-# These match values in https://github.com/bazelbuild/bazel/blob/master/src/main/java/com/google/devtools/build/lib/util/CPU.java
+# To add a new constraint_value see https://github.com/bazelbuild/platforms.
 constraint_setting(name = "cpu")
 
 constraint_value(
