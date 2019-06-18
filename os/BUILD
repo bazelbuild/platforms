@@ -11,10 +11,7 @@ filegroup(
 )
 
 # To add a new constraint_value see https://github.com/bazelbuild/platforms.
-constraint_setting(
-    name = "os",
-    visibility = ["//visibility:private"],
-)
+constraint_setting(name = "os")
 
 constraint_value(
     name = "osx",
