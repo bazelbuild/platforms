@@ -14,52 +14,12 @@ filegroup(
 constraint_setting(name = "cpu")
 
 constraint_value(
-    name = "aarch64",
+    name = "x86_32",
     constraint_setting = ":cpu",
 )
 
 constraint_value(
-    name = "arm",
-    constraint_setting = ":cpu",
-)
-
-constraint_value(
-    name = "arm64_32",
-    constraint_setting = ":cpu",
-)
-
-constraint_value(
-    name = "arm64",
-    constraint_setting = ":cpu",
-)
-
-constraint_value(
-    name = "arm64e",
-    constraint_setting = ":cpu",
-)
-
-constraint_value(
-    name = "armv6",
-    constraint_setting = ":cpu",
-)
-
-constraint_value(
-    name = "armv7",
-    constraint_setting = ":cpu",
-)
-
-constraint_value(
-    name = "armv7k",
-    constraint_setting = ":cpu",
-)
-
-constraint_value(
-    name = "armv7s",
-    constraint_setting = ":cpu",
-)
-
-constraint_value(
-    name = "i386",
+    name = "x86_64",
     constraint_setting = ":cpu",
 )
 
@@ -69,16 +29,16 @@ constraint_value(
 )
 
 constraint_value(
+    name = "arm",
+    constraint_setting = ":cpu",
+)
+
+constraint_value(
+    name = "aarch64",
+    constraint_setting = ":cpu",
+)
+
+constraint_value(
     name = "s390x",
-    constraint_setting = ":cpu",
-)
-
-constraint_value(
-    name = "x86_32",
-    constraint_setting = ":cpu",
-)
-
-constraint_value(
-    name = "x86_64",
     constraint_setting = ":cpu",
 )
