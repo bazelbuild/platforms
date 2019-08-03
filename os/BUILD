@@ -42,3 +42,8 @@ constraint_value(
     name = "windows",
     constraint_setting = ":os",
 )
+
+constraint_value(
+    name = "qnx",
+    constraint_setting = ":os",
+)
