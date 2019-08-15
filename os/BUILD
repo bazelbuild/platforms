@@ -33,6 +33,12 @@ constraint_value(
     constraint_setting = ":os",
 )
 
+# For platforms with no OS, like microcontrollers.
+constraint_value(
+    name = "none",
+    constraint_setting = ":os",
+)
+
 ### Apple OS Values
 
 constraint_value(
