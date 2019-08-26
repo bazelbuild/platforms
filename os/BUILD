@@ -52,6 +52,11 @@ constraint_value(
     constraint_setting = ":os",
 )
 
+alias(
+    name = "macos",
+    actual = ":osx",
+)
+
 constraint_value(
     name = "tvos",
     constraint_setting = ":os",
