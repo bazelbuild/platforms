@@ -14,16 +14,6 @@ filegroup(
 constraint_setting(name = "os")
 
 constraint_value(
-    name = "osx",
-    constraint_setting = ":os",
-)
-
-constraint_value(
-    name = "ios",
-    constraint_setting = ":os",
-)
-
-constraint_value(
     name = "freebsd",
     constraint_setting = ":os",
 )
@@ -40,6 +30,40 @@ constraint_value(
 
 constraint_value(
     name = "windows",
+    constraint_setting = ":os",
+)
+
+# For platforms with no OS, like microcontrollers.
+constraint_value(
+    name = "none",
+    constraint_setting = ":os",
+)
+
+### Apple OS Values
+
+constraint_value(
+    name = "ios",
+    constraint_setting = ":os",
+)
+
+# TODO(b/138656886): Rename this to macos instead of osx.
+constraint_value(
+    name = "osx",
+    constraint_setting = ":os",
+)
+
+alias(
+    name = "macos",
+    actual = ":osx",
+)
+
+constraint_value(
+    name = "tvos",
+    constraint_setting = ":os",
+)
+
+constraint_value(
+    name = "watchos",
     constraint_setting = ":os",
 )
 
