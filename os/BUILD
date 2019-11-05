@@ -66,3 +66,8 @@ constraint_value(
     name = "watchos",
     constraint_setting = ":os",
 )
+
+constraint_value(
+    name = "qnx",
+    constraint_setting = ":os",
+)
