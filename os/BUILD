@@ -38,6 +38,12 @@ constraint_value(
     constraint_setting = ":os",
 )
 
+# For platforms with no OS, like microcontrollers.
+constraint_value(
+    name = "none",
+    constraint_setting = ":os",
+)
+
 ### Apple OS Values
 
 constraint_value(
@@ -51,6 +57,11 @@ constraint_value(
     constraint_setting = ":os",
 )
 
+alias(
+    name = "macos",
+    actual = ":osx",
+)
+
 constraint_value(
     name = "tvos",
     constraint_setting = ":os",
@@ -58,5 +69,10 @@ constraint_value(
 
 constraint_value(
     name = "watchos",
+    constraint_setting = ":os",
+)
+
+constraint_value(
+    name = "qnx",
     constraint_setting = ":os",
 )
