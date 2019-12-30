@@ -76,3 +76,11 @@ constraint_value(
     name = "qnx",
     constraint_setting = ":os",
 )
+
+# NixOS uses the Linux kernel, but is not ABI-compatible with any
+# other Linux distribution. This is because the dynamic linker is in
+# a non-standard (and undefined) location on the filesystem.
+constraint_value(
+    name = "nixos",
+    constraint_setting = ":os",
+)
