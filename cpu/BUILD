@@ -74,3 +74,13 @@ constraint_value(
     name = "x86_64",
     constraint_setting = ":cpu",
 )
+
+constraint_value(
+    name = "wasm32",
+    constraint_setting = ":cpu",
+)
+
+constraint_value(
+    name = "wasm64",
+    constraint_setting = ":cpu",
+)
