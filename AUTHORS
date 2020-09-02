@@ -1,5 +1,9 @@
-# This the official list of authors for copyright purposes.
-# This file is distinct from the CODEOWNERS files.
+# This is the list of bazelbuild/platforms' significant contributors.
+#
+# This does not necessarily list everyone who has contributed code,
+# especially since many employees of one corporation may be contributing.
+# To see the full list of contributors, see the revision history in
+# source control.
 
 # Names should be added to this file as:
 # Name or Organization <email address>
