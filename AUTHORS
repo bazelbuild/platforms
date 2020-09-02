@@ -1,0 +1,11 @@
+# This the official list of authors for copyright purposes.
+# This file is distinct from the CODEOWNERS files.
+
+# Names should be added to this file as:
+# Name or Organization <email address>
+# The email address is not required for organizations.
+
+Google Inc.
+Austin Schuh <austin.linux@gmail.com>
+Lizan Zhou <lizan@tetrate.io>
+Mathieu Boespflug <m@tweag.io>
