@@ -26,6 +26,11 @@ constraint_value(
 )
 
 constraint_value(
+    name = "armv6-m", # Commonly known as thumbv6
+    constraint_setting = ":cpu",
+)
+
+constraint_value(
     name = "arm64_32",
     constraint_setting = ":cpu",
 )
