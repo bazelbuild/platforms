@@ -84,3 +84,10 @@ constraint_value(
     name = "nixos",
     constraint_setting = ":os",
 )
+
+# WASI (WebAssembly System Interface)
+# https://github.com/bytecodealliance/wasmtime/blob/main/docs/WASI-overview.md
+constraint_value(
+    name = "wasi",
+    constraint_setting = ":os",
+)
