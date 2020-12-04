@@ -5,7 +5,7 @@ WARNING: These are what worked last time. Reality might be different.
 ## Step 1: Make the release
 
 - Pick a new version number
-- run distro/make_rel.sh *version*
+- Run distro/make_rel.sh *version*
 - Go to the [Releases](https://github.com/bazelbuild/platforms/releases) page
 - Draft a new release
   - Name the release with a version number
@@ -17,11 +17,11 @@ WARNING: These are what worked last time. Reality might be different.
 
 ## Step 2: Update Bazel
 
-- edit `WORKSPACE`
-- there are probably 7 places to edit
-- merge the PR
+- Edit `WORKSPACE`
+- There are probably 7 places to edit
+- Merge the PR
 
-Sample diff
+Sample diff:
 
 ```
 ***************
