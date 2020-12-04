@@ -11,12 +11,16 @@ if [[ ! -f WORKSPACE ]] ; then
   exit 1
 fi
 
+# tar on macos builds a file with different checksums each time.
+if [[ $(uname) != 'Linux' ]] ; then
+  echo 'You must run this command from a linux machine.'
+  exit 1
+fi
+
 
 dist_file="/tmp/platforms-${version}.tar.gz"
 tar czf "$dist_file" BUILD LICENSE WORKSPACE cpu os
 sha256=$(shasum -a256 "$dist_file" | cut -d' ' -f1)
-md5 $dist_file
-
 
 cat <<INP
 
@@ -26,7 +30,7 @@ cat <<INP
 3. Upload $dist_file as an artifact.
 4. Copy $dist_file to the mirror site.
 5. Create the release.
-6. Update Bazel to point to this new release.
+6. Update Bazel to point to this new release. See the readme.
 
 =============== CUT HERE =============== 
 **WORKSPACE setup**
@@ -36,8 +40,8 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 http_archive(
     name = "platforms",
     urls = [
-        "https://github.com/bazelbuild/platforms/releases/download/$version/platforms-$version.tar.gz",
         "https://mirror.bazel.build/github.com/bazelbuild/platforms/releases/download/$version/platforms-$version.tar.gz",
+        "https://github.com/bazelbuild/platforms/releases/download/$version/platforms-$version.tar.gz",
     ],
     sha256 = "$sha256",
 )
