@@ -1,5 +1,7 @@
 # Updating bazelbuild/platforms
 
+WARNING: These are what worked last time. Reality might be different. 
+
 ## Step 1: Make the release
 
 - Pick a new version number
