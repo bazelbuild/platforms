@@ -14,9 +14,9 @@ filegroup(
 constraint_setting(name = "cpu")
 
 # TODO(b/136237408): Remove this generic CPU name and replace with a specific one.
-constraint_value(
+alias(
     name = "aarch64",
-    constraint_setting = ":cpu",
+    actual = ":arm64",
 )
 
 # TODO(b/136237408): Remove this generic CPU name and replace with a specific one.
