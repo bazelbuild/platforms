@@ -25,8 +25,33 @@ constraint_value(
     constraint_setting = ":cpu",
 )
 
+# Cortex-M0, Cortex-M0+, Cortex-M1
 constraint_value(
     name = "armv6-m",  # Commonly known as thumbv6
+    constraint_setting = ":cpu",
+)
+
+# Cortex-M3
+constraint_value(
+    name = "armv7-m",
+    constraint_setting = ":cpu",
+)
+
+# Cortex-M4, Cortex-M7
+constraint_value(
+    name = "armv7e-m",
+    constraint_setting = ":cpu",
+)
+
+# Cortex-M4, Cortex-M7 with fpu
+constraint_value(
+    name = "armv7e-mf",  # armv7e-m with fpu
+    constraint_setting = ":cpu",
+)
+
+# Cortex-M23, Cortex-M33, Cortex-M35P
+constraint_value(
+    name = "armv8-m",
     constraint_setting = ":cpu",
 )
 
