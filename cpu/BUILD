@@ -114,3 +114,8 @@ constraint_value(
     name = "wasm64",
     constraint_setting = ":cpu",
 )
+
+constraint_value(
+    name = "mips64",
+    constraint_setting = ":cpu",
+)
