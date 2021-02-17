@@ -124,4 +124,3 @@ constraint_value(
     name = "riscv64",
     constraint_setting = ":cpu",
 )
-
