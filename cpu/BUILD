@@ -119,3 +119,8 @@ constraint_value(
     name = "mips64",
     constraint_setting = ":cpu",
 )
+
+constraint_value(
+    name = "riscv64",
+    constraint_setting = ":cpu",
+)
