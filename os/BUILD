@@ -91,3 +91,19 @@ constraint_value(
     name = "wasi",
     constraint_setting = ":os",
 )
+
+# Embedded realtime operating systems.
+constraint_value(
+    name = "embos",
+    constraint_setting = ":os",
+)
+
+constraint_value(
+    name = "freertos",
+    constraint_setting = ":os",
+)
+
+constraint_value(
+    name = "threadx",
+    constraint_setting = ":os",
+)
