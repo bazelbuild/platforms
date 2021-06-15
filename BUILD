@@ -15,11 +15,11 @@ filegroup(
 )
 
 # For use in Incompatible Target Skipping:
-# https://docs.bazel.build/versions/master/platforms.html#skipping-incompatible-targets
+# https://docs.bazel.build/versions/main/platforms.html#skipping-incompatible-targets
 #
 # Specifically this lets targets declare incompatibility with some set of
 # platforms. See
-# https://docs.bazel.build/versions/master/platforms.html#more-expressive-constraints
+# https://docs.bazel.build/versions/main/platforms.html#more-expressive-constraints
 # for some more details.
 constraint_setting(name = "incompatible_setting")
 
