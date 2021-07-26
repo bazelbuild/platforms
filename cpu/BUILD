@@ -121,6 +121,11 @@ constraint_value(
 )
 
 constraint_value(
+    name = "riscv32",
+    constraint_setting = ":cpu",
+)
+
+constraint_value(
     name = "riscv64",
     constraint_setting = ":cpu",
 )
