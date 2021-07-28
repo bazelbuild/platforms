@@ -13,7 +13,7 @@ WARNING: These are what worked last time. Reality might be different.
   - Copy the description that makerel.sh produced to the description field.
   - upload the generated tar file
 
-- use https://github.com/bazelbuild/continuous-integration/blob/master/mirror/mirror.sh to mirror the file
+- use https://github.com/bazelbuild/continuous-integration/blob/HEAD/mirror/mirror.sh to mirror the file
 
 ## Step 2: Update Bazel
 
