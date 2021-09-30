@@ -19,6 +19,11 @@ constraint_value(
 )
 
 constraint_value(
+    name = "netbsd",
+    constraint_setting = ":os",
+)
+
+constraint_value(
     name = "openbsd",
     constraint_setting = ":os",
 )
