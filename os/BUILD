@@ -96,3 +96,8 @@ constraint_value(
     name = "wasi",
     constraint_setting = ":os",
 )
+
+constraint_value(
+    name = "fuchsia",
+    constraint_setting = ":os",
+)
