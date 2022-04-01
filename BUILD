@@ -9,6 +9,7 @@ filegroup(
     srcs = [
         "BUILD",
         "WORKSPACE",
+        "//abi:srcs",
         "//cpu:srcs",
         "//os:srcs",
     ],
