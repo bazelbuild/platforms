@@ -29,6 +29,11 @@ constraint_value(
 )
 
 constraint_value(
+    name = "haiku",
+    constraint_setting = ":os",
+)
+
+constraint_value(
     name = "android",
     constraint_setting = ":os",
 )
