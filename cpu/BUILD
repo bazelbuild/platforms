@@ -129,3 +129,9 @@ constraint_value(
     name = "riscv64",
     constraint_setting = ":cpu",
 )
+
+# LoongArch64
+constraint_value(
+	name = "loong64",
+	constraint_setting = ":cpu",
+)
