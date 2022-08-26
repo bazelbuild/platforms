@@ -5,7 +5,8 @@ WARNING: These are what worked last time. Reality might be different.
 ## Step 1: Make the release
 
 - Pick a new version number
-- Run distro/makerel.sh *version*
+- Update version.bzl
+- Run distro/makerel.sh
 - Go to the [Releases](https://github.com/bazelbuild/platforms/releases) page
 - Draft a new release
   - Name the release with a version number
