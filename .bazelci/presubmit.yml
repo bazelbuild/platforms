@@ -12,3 +12,10 @@ tasks:
   windows:
     build_targets:
     - "//..."
+  ubuntu2004_bzlmod:
+    name: "With bzlmod"
+    platform: ubuntu2004
+    build_targets:
+    - "//..."
+    build_flags:
+    - "--experimental_enable_bzlmod"
