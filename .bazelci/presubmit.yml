@@ -8,38 +8,38 @@ lts: &lts
 rolling: &rolling
   bazel: rolling
 
+targets: &targets
+  build_targets:
+  - "//..."
+
+
 tasks:
   ubuntu_lts:
     name: ubuntu_lts
     platform: ubuntu2004
     <<: *lts
-    build_targets:
-    - "//..."
+    <<: *build_targets
   ubuntu_rolling:
     name: ubuntu_rolling
     platform: ubuntu2004
     <<: *rolling
-    build_targets:
-    - "//..."
+    <<: *build_targets
   macos_lts:
     name: macos_lts
     platform: macos
     <<: *lts
-    build_targets:
-    - "//..."
+    <<: *build_targets
   windows_lts:
     name: windows_lts
     platform: windows
     <<: *lts
-    build_targets:
-    - "//..."
+    <<: *build_targets
   check_bzlmod:
     name: check_bzlmod
     # No need to check bzlmod on every platform. This repository only holds
     # constants and has no per-platform behavior.
     platform: ubuntu2004
     <<: *rolling
-    build_targets:
-    - "//..."
+    <<: *build_targets
     build_flags:
     - "--enable_bzlmod"
