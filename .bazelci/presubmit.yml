@@ -1,4 +1,3 @@
----
 #
 # Bazel releases
 #
@@ -8,6 +7,7 @@ lts: &lts
 rolling: &rolling
   bazel: rolling
 
+---
 tasks:
   ubuntu2004_lts:
     platform: ubuntu2004:
