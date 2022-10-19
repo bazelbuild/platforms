@@ -1,19 +1,41 @@
 ---
+#
+# Bazel releases
+#
+lts: &lts
+  bazel: latest
+
+rolling: &rolling
+  bazel: rolling
+
 tasks:
-  ubuntu2004:
+  ubuntu2004_lts:
+    platform: ubuntu2004:
+    <<: *lts
     build_targets:
     - "//..."
-  macos:
+  ubuntu2004_rolling:
+    platform: ubuntu2004:
+    <<: *rolling
     build_targets:
     - "//..."
-  windows:
+  macos_lts:
+    platform: macos
+    <<: *lts
     build_targets:
     - "//..."
-  ubuntu2004:
+  windows_lts:
+    platform: windows
+    <<: *lts
+    build_targets:
+    - "//..."
+  check_bzlmod:
     # No need to check bzlmod on every platform. This repository only holds
     # constants and has no per-platform behavior.
+    platform: ubuntu2004:
     name: check_bzlmod
+    <<: *rolling
     build_targets:
     - "//..."
     build_flags:
-    - "--experimental_enable_bzlmod"
+    - "--enable_bzlmod"
