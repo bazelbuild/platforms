@@ -11,13 +11,13 @@ rolling: &rolling
 tasks:
   ubuntu_lts:
     name: ubuntu_lts
-    platform: ubuntu2004:
+    platform: ubuntu2004
     <<: *lts
     build_targets:
     - "//..."
   ubuntu_rolling:
     name: ubuntu_rolling
-    platform: ubuntu2004:
+    platform: ubuntu2004
     <<: *rolling
     build_targets:
     - "//..."
@@ -37,7 +37,7 @@ tasks:
     name: check_bzlmod
     # No need to check bzlmod on every platform. This repository only holds
     # constants and has no per-platform behavior.
-    platform: ubuntu2004:
+    platform: ubuntu2004
     <<: *rolling
     build_targets:
     - "//..."
