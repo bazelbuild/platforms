@@ -55,6 +55,12 @@ constraint_value(
     constraint_setting = ":cpu",
 )
 
+# Cortex-R52
+constraint_value(
+    name = "armv8-r",
+    constraint_setting = ":cpu",
+)
+
 constraint_value(
     name = "arm64_32",
     constraint_setting = ":cpu",
@@ -87,6 +93,11 @@ constraint_value(
 
 constraint_value(
     name = "ppc",
+    constraint_setting = ":cpu",
+)
+
+constraint_value(
+    name = "ppc32",
     constraint_setting = ":cpu",
 )
 

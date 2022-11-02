@@ -111,3 +111,14 @@ constraint_value(
     name = "chromiumos",
     constraint_setting = ":os",
 )
+
+constraint_value(
+    name = "trusty",
+    constraint_setting = ":os",
+)
+
+constraint_value(
+    name = "asylo",
+    constraint_setting = ":os",
+)
+
