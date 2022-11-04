@@ -111,4 +111,3 @@ constraint_value(
     name = "chromiumos",
     constraint_setting = ":os",
 )
-
