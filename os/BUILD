@@ -111,3 +111,8 @@ constraint_value(
     name = "chromiumos",
     constraint_setting = ":os",
 )
+
+constraint_value(
+    name = "android_trusty",
+    constraint_setting = ":os",
+)
