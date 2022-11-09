@@ -59,6 +59,7 @@ constraint_value(
 constraint_value(
     name = "armv8-r",
     constraint_setting = ":cpu",
+    deprecation = "Do not use. Use a specific cpu product",
 )
 
 constraint_value(
@@ -83,6 +84,16 @@ constraint_value(
 
 constraint_value(
     name = "armv7k",
+    constraint_setting = ":cpu",
+)
+
+constraint_value(
+    name = "cortex-r52",
+    constraint_setting = ":cpu",
+)
+
+constraint_value(
+    name = "cortex-r82",
     constraint_setting = ":cpu",
 )
 
