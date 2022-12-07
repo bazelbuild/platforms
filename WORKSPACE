@@ -1,5 +1,7 @@
 workspace(name = "platforms")
 
+load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+
 http_archive(
     name = "rules_license",
     urls = [
