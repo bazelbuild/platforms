@@ -72,6 +72,12 @@ alias(
     actual = ":osx",
 )
 
+# MacOS knows itself (eg in `uname`) as Darwin, not as osx or macos.
+alias(
+    name = "darwin",
+    actual = ":osx",
+)
+
 constraint_value(
     name = "tvos",
     constraint_setting = ":os",
