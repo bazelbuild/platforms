@@ -13,7 +13,10 @@ license(
     license_text = "LICENSE",
 )
 
-exports_files(["LICENSE"])
+exports_files([
+    "LICENSE",
+    "MODULE.bazel",
+])
 
 filegroup(
     name = "srcs",
