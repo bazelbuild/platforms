@@ -7,15 +7,15 @@ package(default_visibility = ["//visibility:private"])
 # run linux, so we will still catch a mismatch.
 genrule(
     name = "versions_match",
+    outs = ["found_it"],
     cmd = ";\n".join([
         """echo version: %s""" % version,
         """grep 'version = "%s",' $(location //:MODULE.bazel) >$(location :found_it)""" % version,
     ]),
-    outs = ["found_it"],
-    tools = [
-        "//:MODULE.bazel",
-    ] ,
     target_compatible_with = [
         "//os:linux",
+    ],
+    tools = [
+        "//:MODULE.bazel",
     ],
 )
