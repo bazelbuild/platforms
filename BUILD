@@ -1,8 +1,22 @@
-package(default_visibility = ["//visibility:public"])
+load("@rules_license//rules:license.bzl", "license")
 
-licenses(["notice"])
+package(
+    default_applicable_licenses = [":license"],
+    default_visibility = ["//visibility:public"],
+)
 
-exports_files(["LICENSE"])
+license(
+    name = "license",
+    license_kinds = [
+        "@rules_license//licenses/spdx:Apache-2.0",
+    ],
+    license_text = "LICENSE",
+)
+
+exports_files([
+    "LICENSE",
+    "MODULE.bazel",
+])
 
 filegroup(
     name = "srcs",
