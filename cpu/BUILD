@@ -109,6 +109,11 @@ constraint_value(
 )
 
 constraint_value(
+    name = "ebpf",
+    constraint_setting = ":cpu",
+)
+
+constraint_value(
     name = "i386",
     constraint_setting = ":cpu",
 )
