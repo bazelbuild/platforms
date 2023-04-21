@@ -80,5 +80,5 @@ If you need custom constaint_settings, just declare them in your own repo. They
 are, by definition, not global.
 
 If you really need a permanent global change and it isn't design-approved for
-this repo, contact start a thread on
+this repo, start a thread on
 [GitHub](https://github.com/bazelbuild/bazel/discussions) to discuss options.
