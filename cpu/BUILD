@@ -30,17 +30,19 @@ constraint_setting(name = "cpu")
 # Many of the name here are legacy values and probably violate these conditions.
 # We'll try to clean those up over time.
 
-
-# TODO(b/136237408): Remove this generic CPU name and replace with a specific one.
-alias(
-    name = "aarch64",
-    actual = ":arm64",
+constraint_value(
+    name = "aarch32",
+    constraint_setting = ":cpu",
 )
 
-# TODO(b/136237408): Remove this generic CPU name and replace with a specific one.
 constraint_value(
-    name = "arm",
+    name = "aarch64",
     constraint_setting = ":cpu",
+)
+
+alias(
+    name = "arm",
+    actual = ":aarch32",
 )
 
 # Cortex-M0, Cortex-M0+, Cortex-M1
@@ -73,13 +75,13 @@ constraint_value(
     constraint_setting = ":cpu",
 )
 
-constraint_value(
-    name = "arm64_32",
-    constraint_setting = ":cpu",
+alias(
+    name = "arm64",
+    actual = ":aarch64",
 )
 
 constraint_value(
-    name = "arm64",
+    name = "arm64_32",
     constraint_setting = ":cpu",
 )
 
