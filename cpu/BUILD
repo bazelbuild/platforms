@@ -69,10 +69,9 @@ constraint_value(
     constraint_setting = ":cpu",
 )
 
-# Cortex-M23, Cortex-M33, Cortex-M35P
-constraint_value(
+alias(
     name = "armv8-m",
-    constraint_setting = ":cpu",
+    actual = "//cpu/armv8-m",
 )
 
 alias(
