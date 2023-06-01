@@ -48,6 +48,12 @@ constraint_value(
     constraint_setting = ":os",
 )
 
+# For the VXworks OS, usefull for embedded systems
+constraint_value(
+    name = "vxworks",
+    constraint_setting = ":os",
+)
+
 # For platforms with no OS, like microcontrollers.
 constraint_value(
     name = "none",
