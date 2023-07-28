@@ -83,6 +83,11 @@ constraint_value(
 )
 
 constraint_value(
+    name = "visionos",
+    constraint_setting = ":os",
+)
+
+constraint_value(
     name = "qnx",
     constraint_setting = ":os",
 )
