@@ -42,7 +42,7 @@ constraint_setting(name = "cpu")
 #
 # As a final example, consider building a package of NIC firmware images for
 # many different NIC models.  The package overall is architecture-independent,
-# and should be built with `//cpu:any`, then each individual image rule has a
+# and should be built with `//cpu:all`, then each individual image rule has a
 # transition to the suitable architecture for that specific NIC model.
 constraint_value(
     name = "all",
