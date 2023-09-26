@@ -45,7 +45,7 @@ constraint_setting(name = "cpu")
 # and should be built with `//cpu:any`, then each individual image rule has a
 # transition to the suitable architecture for that specific NIC model.
 constraint_value(
-    name = "any",
+    name = "all",
     constraint_setting = ":cpu",
 )
 
