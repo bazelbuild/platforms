@@ -30,6 +30,25 @@ constraint_setting(name = "cpu")
 # Many of the name here are legacy values and probably violate these conditions.
 # We'll try to clean those up over time.
 
+# Special case: Architecture-independent outputs only
+#
+# Some builds are expected to only produce architecture-independent data files,
+# such as configuration files, database seed data, composited images, or even
+# some kinds of interpreted scripts (Shell, Python, Perl, etc).
+#
+# When such a build is being performed, this constraint value may be used to
+# ensure that architecture-dependent builds cannot be performed (except by way
+# of another transition).
+#
+# As a final example, consider building a package of NIC firmware images for
+# many different NIC models.  The package overall is architecture-independent,
+# and should be built with `//cpu:all`, then each individual image rule has a
+# transition to the suitable architecture for that specific NIC model.
+constraint_value(
+    name = "all",
+    constraint_setting = ":cpu",
+)
+
 constraint_value(
     name = "aarch32",
     constraint_setting = ":cpu",
