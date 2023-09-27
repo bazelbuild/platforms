@@ -4,4 +4,4 @@ module(
     compatibility_level = 1,
 )
 
-bazel_dep(name = "rules_license", version = "0.0.4")
+bazel_dep(name = "rules_license", version = "0.0.7")
