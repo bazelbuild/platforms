@@ -1,10 +1,10 @@
 # [Bazel Platforms](https://bazel.build)
 
 This repository houses all canonical
-[constraint_setting()](https://docs.bazel.build/versions/main/be/platform.html#constraint_setting)s,
-[constraint_value()](https://docs.bazel.build/versions/main/be/platform.html#constraint_value)s
+[constraint_setting()](https://bazel.build/reference/be/platforms-and-toolchains#constraint_setting)s,
+[constraint_value()](https://bazel.build/reference/be/platforms-and-toolchains#constraint_value)s
 and
-[platform()](https://docs.bazel.build/versions/main/be/platform.html#platform)s
+[platform()](https://bazel.build/reference/be/platforms-and-toolchains#platform)s
 that are universally useful across languages and Bazel projects.
 
 For questions or concerns please email
