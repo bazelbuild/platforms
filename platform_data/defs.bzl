@@ -19,7 +19,7 @@ py_binary(
 )
 
 Regardless of what platform the top-level :flasher binary is built for,
-the :foo_embedded target will be built for //my/new:platform."""
+the :foo_embedded target will be built for //my/new:platform. Note that if you depend on :foo_embedded it's not exactly the same as depending on :foo, since it won't forward all the same providers. In the future, we can extend this to add some common providers as needed"""
 
 def _target_platform_transition_impl(attr):
     return {
