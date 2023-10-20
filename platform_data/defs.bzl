@@ -37,7 +37,6 @@ _target_platform_transition = transition(
 )
 
 def _platform_data_impl(ctx):
-    result = []
     target = ctx.attr.target
 
     default_info = target[DefaultInfo]
@@ -56,14 +55,13 @@ def _platform_data_impl(ctx):
     files = depset(direct = [new_executable], transitive = [files])
     runfiles = runfiles.merge(ctx.runfiles([new_executable]))
 
-    result.append(
-        DefaultInfo(
+    return [
+	DefaultInfo(
             files = files,
             runfiles = runfiles,
             executable = new_executable,
-        ),
-    )
-    return result
+	)
+    ]
 
 platform_data = rule(
     implementation = _platform_data_impl,
