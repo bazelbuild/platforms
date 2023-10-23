@@ -1,6 +1,7 @@
 """
 The platform_data rule can be used to change the target platform of a target,
 and then depend on that elsewhere in the build tree. For example:
+load("@platforms//experimental/platform_data:defs.bzl", "platform_data")
 
 cc_binary(name = "foo")
 
