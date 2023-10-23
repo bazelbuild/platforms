@@ -145,6 +145,11 @@ constraint_value(
 )
 
 constraint_value(
+    name = "ppc64le",
+    constraint_setting = ":cpu",
+)
+
+constraint_value(
     name = "s390x",
     constraint_setting = ":cpu",
 )
