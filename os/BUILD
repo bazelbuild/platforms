@@ -106,6 +106,11 @@ constraint_value(
     constraint_setting = ":os",
 )
 
+constraint_value(
+    name = "emscripten",
+    constraint_setting = ":os",
+)
+
 # WASI (WebAssembly System Interface)
 # https://github.com/bytecodealliance/wasmtime/blob/main/docs/WASI-overview.md
 constraint_value(
