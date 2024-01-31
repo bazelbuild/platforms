@@ -20,11 +20,13 @@ py_binary(
 )
 
 Regardless of what platform the top-level :flasher binary is built for,
-the :foo_embedded target will be built for //my/new:platform. 
+the :foo_embedded target will be built for //my/new:platform.
 
 Note that if you depend on :foo_embedded it's not exactly the same as depending on :foo, since it won't forward all the same providers. In the future, we can extend this to add some common providers as needed."""
 
-def _target_platform_transition_impl(attr):
+def _target_platform_transition_impl(settings, attr):
+    # buildifier: disable=unused-variable
+    _ignore = settings
     return {
         "//command_line_option:platforms": str(attr.platform),
     }
@@ -38,9 +40,7 @@ _target_platform_transition = transition(
 )
 
 def _platform_data_impl(ctx):
-    target = ctx.attr.target
-
-    default_info = target[DefaultInfo]
+    default_info = ctx.attr.target[0][DefaultInfo]
     files = default_info.files
     original_executable = default_info.files_to_run.executable
     runfiles = default_info.default_runfiles
@@ -57,11 +57,11 @@ def _platform_data_impl(ctx):
     runfiles = runfiles.merge(ctx.runfiles([new_executable]))
 
     return [
-	DefaultInfo(
+        DefaultInfo(
             files = files,
             runfiles = runfiles,
             executable = new_executable,
-	)
+        ),
     ]
 
 platform_data = rule(
@@ -82,4 +82,3 @@ platform_data = rule(
     },
     executable = True,
 )
-
