@@ -6,6 +6,6 @@ module(
 
 bazel_dep(name = "rules_license", version = "0.0.7")
 
-host_platform = use_extension("//host:host_platform.bzl", "host_platform_ext")
+host_platform = use_extension("//host:extension.bzl", "host_platform")
 use_repo(host_platform, "host_platform")
 

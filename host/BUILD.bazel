@@ -1,7 +1,11 @@
+load("@host_platform//:constraints.bzl", "HOST_CONSTRAINTS")
+
 package(default_visibility = ["//visibility:public"])
 
-alias(
+exports_files(["constraints.bzl"])
+
+platform(
     name = "host",
-    actual = "@host_platform//:host",
+    constraint_values = HOST_CONSTRAINTS,
 )
 

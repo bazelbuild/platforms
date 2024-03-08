@@ -39,18 +39,7 @@ def _host_platform_repo_impl(rctx):
 
     rctx.file("BUILD.bazel", """
 # DO NOT EDIT: automatically generated BUILD file
-load(":constraints.bzl", "HOST_CONSTRAINTS")
-
-package(default_visibility = ["//visibility:public"])
-
-exports_files([
-    "constraints.bzl",
-])
-
-platform(
-    name = "host",
-    constraint_values = HOST_CONSTRAINTS,
-)
+exports_files(["constraints.bzl"])
 """)
 
     rctx.file("constraints.bzl", """
@@ -61,8 +50,8 @@ HOST_CONSTRAINTS = [
 
 host_platform_repo = repository_rule(_host_platform_repo_impl)
 
-def _host_platform_ext_impl(_mctx):
+def _host_platform_impl(_mctx):
     host_platform_repo(name = "host_platform")
 
-host_platform_ext = module_extension(_host_platform_ext_impl)
+host_platform = module_extension(_host_platform_impl)
 
