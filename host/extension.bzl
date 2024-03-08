@@ -48,10 +48,10 @@ HOST_CONSTRAINTS = [
 %s%s]
 """ % (cpu, os))
 
-host_platform_repo = repository_rule(_host_platform_repo_impl)
+_host_platform_repo = repository_rule(_host_platform_repo_impl)
 
 def _host_platform_impl(_mctx):
-    host_platform_repo(name = "host_platform")
+    _host_platform_repo(name = "host_platform")
 
 host_platform = module_extension(_host_platform_impl)
 
