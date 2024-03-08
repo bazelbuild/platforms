@@ -1,0 +1,7 @@
+package(default_visibility = ["//visibility:public"])
+
+alias(
+    name = "host",
+    actual = "@host_platform//:host",
+)
+

@@ -1,7 +1,11 @@
 module(
     name = "platforms",
-    version = "0.0.8",  # keep in sync with version.bzl
+    version = "0.0.9",  # keep in sync with version.bzl
     compatibility_level = 1,
 )
 
 bazel_dep(name = "rules_license", version = "0.0.7")
+
+host_platform = use_extension("//host:host_platform.bzl", "host_platform_ext")
+use_repo(host_platform, "host_platform")
+
