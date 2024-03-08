@@ -1,19 +1,19 @@
 def _translate_cpu(arch):
     if arch in ["i386", "i486", "i586", "i686", "i786", "x86"]:
         return "x86_32"
-    if arch in ["amd64", "x86_64", "x64"]
+    if arch in ["amd64", "x86_64", "x64"]:
         return "x86_64"
-    if arch in ["ppc", "ppc64", "ppc64le"]
+    if arch in ["ppc", "ppc64", "ppc64le"]:
         return "ppc"
-    if arch in ["arm", "armv7l"]
+    if arch in ["arm", "armv7l"]:
         return "arm"
-    if arch in ["aarch64"]
+    if arch in ["aarch64"]:
         return "aarch64"
-    if arch in ["s390x", "s390"]
+    if arch in ["s390x", "s390"]:
         return "s390x"
-    if arch in ["mips64el", "mips64"]
+    if arch in ["mips64el", "mips64"]:
         return "mips64"
-    if arch in ["riscv64"]
+    if arch in ["riscv64"]:
         return "riscv64"
     return None
 
