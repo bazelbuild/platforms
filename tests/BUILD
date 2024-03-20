@@ -27,14 +27,3 @@ sh_test(
     env = {"ACTUAL_HOST_CONSTRAINTS": repr(HOST_CONSTRAINTS)},
     env_inherit = ["EXPECTED_HOST_CONSTRAINTS"],
 )
-
-genrule(
-    name = "host_constraaints_test",
-    outs = ["host_constraints_are_as_expected"],
-    cmd = ";\n".join([
-        "echo actual host constraints: %s" % repr(HOST_CONSTRAINTS),
-        "echo expected host constraints: $$PLATFORMS_TEST_EXPECTED_HOST_CONSTRAINTS",
-        "touch host_constraints_are_as_expected",
-        "test '%s' == \"$${PLATFORMS_TEST_EXPECTED_HOST_CONSTRAINTS}\"",
-    ]),
-)
