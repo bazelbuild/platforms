@@ -1,46 +1,33 @@
----
-#
-# Bazel releases
-#
-lts: &lts
-  bazel: latest
-
-rolling: &rolling
-  bazel: rolling
-
-
-targets: &targets
-  build_targets:
-  - "//..."
-
-
 tasks:
-  ubuntu_lts:
-    name: ubuntu_lts
+  ubuntu:
     platform: ubuntu2004
-    <<: *lts
-    <<: *targets
-  ubuntu_rolling:
-    name: ubuntu_rolling
-    platform: ubuntu2004
-    <<: *rolling
-    <<: *targets
-  macos_lts:
-    name: macos_lts
+    build_targets:
+    - "//..."
+    test_targets:
+    - "//..."
+    environment:
+      EXPECTED_HOST_CONSTRAINTS: '["@platforms//cpu:x86_64", "@platforms//os:linux"]'
+  macos:
     platform: macos
-    <<: *lts
-    <<: *targets
-  windows_lts:
-    name: windows_lts
+    build_targets:
+    - "//..."
+    test_targets:
+    - "//..."
+    environment:
+      EXPECTED_HOST_CONSTRAINTS: '["@platforms//cpu:x86_64", "@platforms//os:osx"]'
+  macos_arm64:
+    platform: macos_arm64
+    build_targets:
+    - "//..."
+    test_targets:
+    - "//..."
+    environment:
+      EXPECTED_HOST_CONSTRAINTS: '["@platforms//cpu:aarch64", "@platforms//os:osx"]'
+  windows:
     platform: windows
-    <<: *lts
-    <<: *targets
-  check_bzlmod:
-    name: check_bzlmod
-    # No need to check bzlmod on every platform. This repository only holds
-    # constants and has no per-platform behavior.
-    platform: ubuntu2004
-    <<: *rolling
-    <<: *targets
-    build_flags:
-    - "--enable_bzlmod"
+    build_targets:
+    - "//..."
+    test_targets:
+    - "//..."
+    environment:
+      EXPECTED_HOST_CONSTRAINTS: '["@platforms//cpu:x86_64", "@platforms//os:windows"]'
