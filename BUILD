@@ -25,6 +25,7 @@ filegroup(
         "WORKSPACE",
         "//cpu:srcs",
         "//os:srcs",
+        "//host:srcs",
     ],
 )
 
