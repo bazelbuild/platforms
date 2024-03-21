@@ -48,10 +48,20 @@ HOST_CONSTRAINTS = [
 %s%s]
 """ % (cpu, os))
 
-_host_platform_repo = repository_rule(_host_platform_repo_impl)
+host_platform_repo = repository_rule(
+    implementation = _host_platform_repo_impl,
+    doc = """Generates constraints for the host platform. The constraints.bzl
+file contains a single <code>HOST_CONSTRAINTS</code> variable, which is a
+list of strings, each of which is a label to a <code>constraint_value</code>
+for the host platform.""",
+)
 
 def _host_platform_impl(_mctx):
-    _host_platform_repo(name = "host_platform")
+    host_platform_repo(name = "host_platform")
 
-host_platform = module_extension(_host_platform_impl)
+host_platform = module_extension(
+    implementation = _host_platform_impl,
+    doc = """Generates a <code>host_platform_repo</code> repo named
+<code>host_platform</code>, containing constraints for the host platform.""",
+)
 
