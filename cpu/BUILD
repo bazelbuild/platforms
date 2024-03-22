@@ -179,12 +179,26 @@ constraint_value(
     constraint_setting = ":cpu",
 )
 
+# Base integer instruction set, 32-bit.
 constraint_value(
     name = "riscv32",
     constraint_setting = ":cpu",
 )
 
+# Base integer instruction set, 32-bit, 16 registers.
+constraint_value(
+    name = "riscv32e",
+    constraint_setting = ":cpu",
+)
+
+# Base integer instruction set, 64-bit.
 constraint_value(
     name = "riscv64",
+    constraint_setting = ":cpu",
+)
+
+# Base integer instruction set, 64-bit, 16 registers.
+constraint_value(
+    name = "riscv64e",
     constraint_setting = ":cpu",
 )
