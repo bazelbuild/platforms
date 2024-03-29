@@ -8,11 +8,13 @@ exports_files(["constraints.bzl", "extension.bzl"])
 
 filegroup(
     name = "srcs",
-    srcs = glob(["**"]),
+    srcs = glob(["**"]) + [
+        # Include the generated code so that users can build docs with stardoc
+        "@host_platform//:constraints.bzl",
+    ],
 )
 
 platform(
     name = "host",
     constraint_values = HOST_CONSTRAINTS,
 )
-

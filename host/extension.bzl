@@ -39,6 +39,8 @@ def _host_platform_repo_impl(rctx):
 
     rctx.file("BUILD.bazel", """
 # DO NOT EDIT: automatically generated BUILD file
+package(default_visibility = ["//visibility:public"])
+
 exports_files(["constraints.bzl"])
 """)
 
