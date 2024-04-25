@@ -16,3 +16,19 @@ platform(
     constraint_values = HOST_CONSTRAINTS,
 )
 
+# The following filegroup targets are essentially bzl_library targets.
+# We don't directly use bzl_library to avoid a dependency on bazel-skylib.
+filegroup(
+    name = "constraints_lib",
+    srcs = [
+        "constraints.bzl",
+        "@host_platform//:constraints.bzl",
+    ],
+)
+
+filegroup(
+    name = "extension_lib",
+    srcs = [
+        "extension.bzl",
+    ],
+)
