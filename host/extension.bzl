@@ -1,5 +1,3 @@
-load("@bazel_skylib//lib:modules.bzl", "modules")
-
 def _translate_cpu(arch):
     if arch in ["i386", "i486", "i586", "i686", "i786", "x86"]:
         return "x86_32"
@@ -58,11 +56,20 @@ list of strings, each of which is a label to a <code>constraint_value</code>
 for the host platform.""",
 )
 
-def _host_platform_impl():
+def _host_platform_impl(module_ctx):
     host_platform_repo(name = "host_platform")
 
-host_platform = modules.as_extension(
-    _host_platform_impl,
+    # module_ctx.extension_metadata has the paramater `reproducible` as of Bazel 7.1.0. We can't
+    # test for it directly and would ideally use bazel_features to check for it, but adding a
+    # dependency on it would require complicating the WORKSPACE setup. Thus, test for it by
+    # checking the availability of another feature introduced in 7.1.0.
+    if hasattr(module_ctx, "extension_metadata") and hasattr(module_ctx, "watch"):
+        return module_ctx.extension_metadata(reproducible = True)
+    else:
+        return None
+
+host_platform = module_extension(
+    implementation = _host_platform_impl,
     doc = """Generates a <code>host_platform_repo</code> repo named
 <code>host_platform</code>, containing constraints for the host platform.""",
 )
