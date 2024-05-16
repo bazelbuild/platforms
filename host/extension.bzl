@@ -1,3 +1,5 @@
+load("@bazel_skylib//lib:modules.bzl", "modules")
+
 def _translate_cpu(arch):
     if arch in ["i386", "i486", "i586", "i686", "i786", "x86"]:
         return "x86_32"
@@ -56,11 +58,11 @@ list of strings, each of which is a label to a <code>constraint_value</code>
 for the host platform.""",
 )
 
-def _host_platform_impl(_mctx):
+def _host_platform_impl():
     host_platform_repo(name = "host_platform")
 
-host_platform = module_extension(
-    implementation = _host_platform_impl,
+host_platform = modules.as_extension(
+    _host_platform_impl,
     doc = """Generates a <code>host_platform_repo</code> repo named
 <code>host_platform</code>, containing constraints for the host platform.""",
 )
