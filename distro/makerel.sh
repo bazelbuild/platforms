@@ -19,7 +19,7 @@ fi
 
 
 dist_file="/tmp/platforms-${version}.tar.gz"
-tar czf "$dist_file" BUILD LICENSE MODULE.bazel WORKSPACE WORKSPACE.bzlmod version.bzl cpu os host
+tar czf "$dist_file" BUILD LICENSE MODULE.bazel WORKSPACE WORKSPACE.bzlmod version.bzl cpu os host experimental
 sha256=$(shasum -a256 "$dist_file" | cut -d' ' -f1)
 
 path="github.com/bazelbuild/platforms/releases/download/$version/platforms-$version.tar.gz"

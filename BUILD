@@ -26,6 +26,7 @@ filegroup(
         "//cpu:srcs",
         "//os:srcs",
         "//host:srcs",
+        "//experimental/platform_data:srcs",
     ],
 )
 
