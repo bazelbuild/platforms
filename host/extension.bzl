@@ -54,6 +54,7 @@ host_platform_repo = repository_rule(
 file contains a single <code>HOST_CONSTRAINTS</code> variable, which is a
 list of strings, each of which is a label to a <code>constraint_value</code>
 for the host platform.""",
+    local = True,
 )
 
 def _host_platform_impl(module_ctx):
