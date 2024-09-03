@@ -29,6 +29,11 @@ constraint_value(
 )
 
 constraint_value(
+    name = "dragonflybsd",
+    constraint_setting = ":os",
+)
+
+constraint_value(
     name = "haiku",
     constraint_setting = ":os",
 )
@@ -130,5 +135,15 @@ constraint_value(
 
 constraint_value(
     name = "uefi",
+    constraint_setting = ":os",
+)
+
+constraint_value(
+    name = "redox",
+    constraint_setting = ":os",
+)
+
+constraint_value(
+    name = "illumos",
     constraint_setting = ":os",
 )
