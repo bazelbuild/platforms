@@ -1,6 +1,6 @@
 module(
     name = "platforms",
-    version = "0.0.10",  # keep in sync with version.bzl
+    version = "0.0.11",  # keep in sync with version.bzl
     compatibility_level = 1,
 )
 
