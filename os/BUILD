@@ -127,3 +127,8 @@ constraint_value(
     name = "chromiumos",
     constraint_setting = ":os",
 )
+
+constraint_value(
+    name = "uefi",
+    constraint_setting = ":os",
+)
