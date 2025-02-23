@@ -60,6 +60,11 @@ constraint_value(
 )
 
 alias(
+    name = "amd64",
+    actual = ":x86_64",
+)
+
+alias(
     name = "arm",
     actual = ":aarch32",
 )
