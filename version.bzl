@@ -13,4 +13,4 @@
 # limitations under the License.
 """The version of bazelbuild/platforms."""
 
-version = "0.0.11"
+version = "1.0.0"
