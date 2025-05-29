@@ -188,3 +188,15 @@ constraint_value(
     name = "riscv64",
     constraint_setting = ":cpu",
 )
+
+# BPF (big endian)
+constraint_value(
+    name = "bpfbe",
+    constraint_setting = ":cpu",
+)
+
+# BPF (little endian)
+constraint_value(
+    name = "bpfle",
+    constraint_setting = ":cpu",
+)
