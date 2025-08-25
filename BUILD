@@ -1,11 +1,34 @@
-load("@rules_license//rules:license.bzl", "license")
+load("@package_metadata//licenses/rules:license.bzl", "license")
+load("@package_metadata//rules:package_metadata.bzl", "package_metadata")
+load("@rules_license//rules:license.bzl", deprecated_license = "license")
 
 package(
-    default_applicable_licenses = [":license"],
+    default_applicable_licenses = [
+        ":license",
+        ":package_metadata",
+    ],
     default_visibility = ["//visibility:public"],
 )
 
+package_metadata(
+    name = "package_metadata",
+    attributes = [
+        ":package_metadata_license",
+    ],
+    purl = "pkg:bazel/{}@{}".format(
+        module_name(),
+        module_version(),
+    ) if module_version() else "pkg:bazel/{}".format(module_name()),
+    visibility = ["//visibility:public"],
+)
+
 license(
+    name = "package_metadata_license",
+    kind = "@package_metadata//licenses/spdx:Apache-2.0",
+    text = "LICENSE",
+)
+
+deprecated_license(
     name = "license",
     license_kinds = [
         "@rules_license//licenses/spdx:Apache-2.0",
