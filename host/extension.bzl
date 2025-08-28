@@ -17,6 +17,8 @@ def _translate_cpu(arch):
         return "mips64"
     if arch in ["riscv64"]:
         return "riscv64"
+    if arch in ["sw_64"]:
+        return "sw_64"
     return None
 
 def _translate_os(os):
