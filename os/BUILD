@@ -132,3 +132,8 @@ constraint_value(
     name = "uefi",
     constraint_setting = ":os",
 )
+
+constraint_value(
+    name = "aix",
+    constraint_setting = ":os",
+)
