@@ -120,6 +120,11 @@ constraint_value(
 )
 
 constraint_value(
+    name = "avr",
+    constraint_setting = ":cpu",
+)
+
+constraint_value(
     name = "cortex-r52",
     constraint_setting = ":cpu",
 )
