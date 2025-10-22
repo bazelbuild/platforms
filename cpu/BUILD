@@ -188,3 +188,13 @@ constraint_value(
     name = "riscv64",
     constraint_setting = ":cpu",
 )
+
+constraint_value(
+    name = "bpfel",
+    constraint_setting = ":cpu",
+)
+
+constraint_value(
+    name = "bpfeb",
+    constraint_setting = ":cpu",
+)
