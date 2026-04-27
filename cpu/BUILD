@@ -64,6 +64,13 @@ alias(
     actual = ":aarch32",
 )
 
+# ARMv6 application profile (ARM11, e.g. Raspberry Pi 1/Zero).
+# Distinct from armv6-m which is the Cortex-M0 microcontroller profile.
+constraint_value(
+    name = "armv6",
+    constraint_setting = ":cpu",
+)
+
 # Cortex-M0, Cortex-M0+, Cortex-M1
 constraint_value(
     name = "armv6-m",  # Commonly known as thumbv6
@@ -175,6 +182,11 @@ constraint_value(
 )
 
 constraint_value(
+    name = "mips32",
+    constraint_setting = ":cpu",
+)
+
+constraint_value(
     name = "mips64",
     constraint_setting = ":cpu",
 )
@@ -191,5 +203,35 @@ constraint_value(
 
 constraint_value(
     name = "loongarch64",
+    constraint_setting = ":cpu",
+)
+
+constraint_value(
+    name = "avr",
+    constraint_setting = ":cpu",
+)
+
+constraint_value(
+    name = "hexagon",
+    constraint_setting = ":cpu",
+)
+
+constraint_value(
+    name = "bpfel",
+    constraint_setting = ":cpu",
+)
+
+constraint_value(
+    name = "bpfeb",
+    constraint_setting = ":cpu",
+)
+
+constraint_value(
+    name = "sparc64",
+    constraint_setting = ":cpu",
+)
+
+constraint_value(
+    name = "xtensa",
     constraint_setting = ":cpu",
 )
