@@ -1,3 +1,4 @@
+load("@rules_shell//shell:sh_test.bzl", "sh_test")
 load("//host:constraints.bzl", "HOST_CONSTRAINTS")
 
 package(default_visibility = ["//visibility:private"])
