@@ -101,6 +101,12 @@ constraint_value(
     constraint_setting = ":cpu",
 )
 
+# Cortex-M52, Cortex-M55
+constraint_value(
+    name = "armv8.1-m",
+    constraint_setting = ":cpu",
+)
+
 alias(
     name = "arm64",
     actual = ":aarch64",
