@@ -111,10 +111,22 @@ constraint_value(
     constraint_setting = ":os",
 )
 
-# WASI (WebAssembly System Interface)
-# https://github.com/bytecodealliance/wasmtime/blob/main/docs/WASI-overview.md
+# WASI Preview 1 (WebAssembly System Interface)
+# https://github.com/WebAssembly/WASI/blob/main/legacy/preview1/docs.md
 constraint_value(
+    name = "wasip1",
+    constraint_setting = ":os",
+)
+
+alias(
     name = "wasi",
+    actual = ":wasip1",
+)
+
+# WASI Preview 2 is ABI-incompatible with Preview 1.
+# https://github.com/WebAssembly/WASI/blob/main/preview2/README.md
+constraint_value(
+    name = "wasip2",
     constraint_setting = ":os",
 )
 
