@@ -50,6 +50,10 @@ HOST_CONSTRAINTS = [
 %s%s]
 """ % (cpu, os))
 
+    if hasattr(rctx, "repo_metadata"):
+        return rctx.repo_metadata(reproducible = True)
+    return None
+
 host_platform_repo = repository_rule(
     implementation = _host_platform_repo_impl,
     doc = """Generates constraints for the host platform. The constraints.bzl
@@ -76,4 +80,3 @@ host_platform = module_extension(
     doc = """Generates a <code>host_platform_repo</code> repo named
 <code>host_platform</code>, containing constraints for the host platform.""",
 )
-
