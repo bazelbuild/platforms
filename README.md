@@ -82,3 +82,9 @@ are, by definition, not global.
 If you really need a permanent global change and it isn't design-approved for
 this repo, start a thread on
 [GitHub](https://github.com/bazelbuild/bazel/discussions) to discuss options.
+
+# Dependencies
+
+If you use WORKSPACE rather than bzlmod, to use `@platforms` you will also need
+to depend on `@rules_license`. Pick the latest one from
+[rules_license/releases](https://github.com/bazelbuild/rules_license/releases).
