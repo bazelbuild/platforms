@@ -171,6 +171,16 @@ constraint_value(
     constraint_setting = ":cpu",
 )
 
+alias(
+    name = "amd64",
+    actual = ":x86_64",
+)
+
+alias(
+    name = "x64",
+    actual = ":x86_64",
+)
+
 constraint_value(
     name = "wasm32",
     constraint_setting = ":cpu",
