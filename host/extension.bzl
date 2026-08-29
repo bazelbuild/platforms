@@ -26,6 +26,8 @@ def _translate_os(os):
         return "osx"
     if os.startswith("freebsd"):
         return "freebsd"
+    if os.startswith("netbsd"):
+        return "netbsd"
     if os.startswith("openbsd"):
         return "openbsd"
     if os.startswith("linux"):
