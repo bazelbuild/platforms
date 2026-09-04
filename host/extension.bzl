@@ -32,6 +32,8 @@ def _translate_os(os):
         return "linux"
     if os.startswith("windows"):
         return "windows"
+    if os.startswith("dragonfly"):
+        return "dragonfly"
     return None
 
 def _host_platform_repo_impl(rctx):
