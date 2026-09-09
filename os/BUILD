@@ -14,6 +14,11 @@ filegroup(
 constraint_setting(name = "os")
 
 constraint_value(
+    name = "dragonfly",
+    constraint_setting = ":os",
+)
+
+constraint_value(
     name = "freebsd",
     constraint_setting = ":os",
 )
