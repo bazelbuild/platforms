@@ -24,6 +24,8 @@ def _translate_cpu(arch):
 def _translate_os(os):
     if os.startswith("mac os"):
         return "osx"
+    if os.startswith("midnightbsd"):
+        return "freebsd"
     if os.startswith("freebsd"):
         return "freebsd"
     if os.startswith("openbsd"):
